@@ -1,0 +1,314 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 252);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#title {
+    font-family: Calistoga;
+    margin-top: 70px;
+}
+
+.intro {
+    margin: 0;
+    font-size: clamp(10px, 5vw, 32px);
+    position: relative;
+    right: clamp(1px, 3vw, 20px);
+    top: clamp(1px, 1.5vw, 10px);
+}
+
+.hello {
+    font-size: clamp(15px, 7vw, 50px);
+    margin-right: clamp(1px, 1vw, 5px);
+}
+
+h1 {
+    font-size: clamp(20px, 11vw, 70px);
+    margin: 0;
+}
+
+.web-dev {
+    text-align: end;
+    font-size: clamp(10px, 5vw, 32px);
+    margin: 0;
+}
+
+#self, #shapes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.shape, .self-img {
+    position: absolute;
+    height: 50vw;
+    max-height: 300px;
+}
+
+.shape:hover {
+    filter: brightness(1.2);
+}
+
+.self-img {
+    transform: scale(1.2);
+    top: clamp(10px, 20vw, 100px);
+}
+
+.hex {
+    transform: scale(.6);
+    left: clamp(-800px, -70vw, 10px);
+    animation: hex-hover 90s linear infinite;
+}
+
+.red-circle {
+    transform: scale(.8);
+    right: clamp(-500px, -70vw, -5px);
+    top: clamp(10px, 60vw, 280px);
+    animation: red-hover 30s linear infinite;
+}
+
+.square {
+    transform: scale(1.1);
+    top: clamp(10px, 90vw, 400px);
+    left: clamp(-550px, -70vw, 10px);
+    animation: square-hover 30s linear infinite;
+}
+
+.triangle {
+    transform: scale(.5);
+    right: clamp(-350px, -55vw, -10px);
+    top: clamp(-100px, -8vw, -10px);
+    animation: triangle-hover 60s linear infinite;
+}
+
+.yellow-circle {
+    transform: scale(1.2);
+    bottom: clamp(10px, 22vw, 110px);
+    left: clamp(-850px, -10vw, 50px);
+    animation: yellow-hover 30s linear infinite;
+}
+
+
+@media screen and (min-width: 750px) {
+
+    #title {
+        align-self: flex-start;
+        margin-left: 100px;
+    }
+
+    #self, #shapes {
+        align-self: flex-end;
+    }
+
+    #shapes {
+        right: 380px;
+    }
+
+    .self-img {
+        right: 250px;
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+
+    .hex {
+        left: -900px;
+        top: 100px;
+    }
+    
+    .red-circle {
+        right: -500px;
+        top: 250px;
+    }
+    
+    .square {
+        top: 300px;
+        left: -550px;
+    }
+    
+    .triangle {
+        right: -350px;
+        top: -100px;
+    }
+    
+    .yellow-circle {
+        bottom: 50px;
+        left: -250px;
+    }
+} 
+
+
+@keyframes square-hover {
+    0% {
+        transform: translate(0, 0) scale(1.1);
+    }
+
+    14% {
+        transform: translate(10px, -10px) scale(1.1);
+    }
+
+    22% {
+        transform: translate(0, 5px) scale(1.1);
+    }
+
+    43% {
+        transform: translate(5px, -15px) scale(1.1);
+    }
+
+    58% {
+        transform: translate(0, 0) scale(1.1);
+    }
+
+    77% {
+        transform: translate(-8px, 10px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1.1);
+    }
+}
+
+@keyframes triangle-hover {
+    0% {
+        transform: translate(0, 0) scale(.5) rotate(0);
+    }
+
+    16% {
+        transform: translate(10px, 10px) scale(.5) rotate(60deg);
+    }
+
+    32% {
+        transform: translate(0, 5px) scale(.5) rotate(120deg);
+    }
+
+    48% {
+        transform: translate(-5px, 15px) scale(.5) rotate(180deg);
+    }
+
+    64% {
+        transform: translate(0, 0) scale(.5) rotate(240deg);
+    }
+
+    80% {
+        transform: translate(8px, 10px) scale(.5) rotate(300deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(.5) rotate(360deg);
+    }
+}
+
+@keyframes hex-hover {
+
+    0% {
+        transform: translate(15px, 15px) scale(.6) rotate(0);
+    }
+
+    17% {
+        transform: translate(0, 5px) scale(.6) rotate(-60deg);
+    }
+
+    34% {
+        transform: translate(-15px, 25px) scale(.6) rotate(-120deg);
+    }
+
+    51% {
+        transform: translate(0, 0) scale(.6) rotate(-180deg);
+    }
+
+    68% {
+        transform: translate(12px, 15px) scale(.6) rotate(-240deg);
+    }
+
+    85% {
+        transform: translate(0, 0) scale(.6) rotate(-300deg);
+    }
+
+    100% {
+        transform: translate(15px, 15px) scale(.6) rotate(-360deg);
+    }
+}
+
+@keyframes red-hover {
+
+    0% {
+        transform: translate(0, 0) scale(.8);
+    }
+
+    15% {
+        transform: translate(0, 15px) scale(.8);
+    }
+
+    30% {
+        transform: translate(0, 0) scale(.8);
+    }
+
+    45% {
+        transform: translate(5px, 10px) scale(.8);
+    }
+
+    60% {
+        transform: translate(12px, 25px) scale(.8);
+    }
+
+    75% {
+        transform: translate(0, 5px) scale(.8);
+    }
+
+    90% {
+        transform: translate(15px, 15px) scale(.8);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(.8);
+    }
+}
+
+@keyframes yellow-hover {
+
+    0% {
+        transform: translate(0, 0) scale(1.2);
+    }
+
+    8% {
+        transform: translate(-5px, 10px) scale(1.2);
+    }
+
+    18% {
+        transform: translate(0, 0) scale(1.2);
+    }
+
+    35% {
+        transform: translate(5px, 15px) scale(1.2);
+    }
+
+    50% {
+        transform: translate(-12px, 35px) scale(1.2);
+    }
+
+    72% {
+        transform: translate(0, 15px) scale(1.2);
+    }
+
+    88% {
+        transform: translate(20px, 20px) scale(1.2);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1.2);
+    }
+}
+
+
