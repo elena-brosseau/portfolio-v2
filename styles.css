@@ -24,6 +24,7 @@ main {
     font-family: Roboto;
     margin-top: 90px;
     z-index: -1;
+    position: relative;
 }
 
 .intro {
@@ -37,7 +38,8 @@ main {
 
 .build {
     font-size: clamp(10px, 5vw, 32px);
-    margin-left: 19% !important;
+    position: absolute;
+    left: 19%;
 }
 
 /* .name {
@@ -86,6 +88,11 @@ h1 {
     justify-content: center;
 }
 
+#self {
+    margin-top: 60px;
+    z-index: 1;
+}
+
 #shapes {
     align-items: center;
     height: 100%;
@@ -109,12 +116,13 @@ h1 {
 }
 
 .hex-wrapper {
-    transform: translateZ(-8px) scale(1.8);
+    transform: translateZ(1px) scale(.9);
 }
 
 .hex {
     transform: scale(.6);
-    left: clamp(-800px, -70vw, 10px);
+    left: clamp(-800px, -65vw, -360px);
+    top: 50px;
     animation: hex-hover 90s linear infinite;
 }
 
@@ -124,13 +132,13 @@ h1 {
 
 .red-circle {
     transform: scale(.8);
-    right: clamp(-500px, -70vw, -5px);
+    right: clamp(-450px, -60vw, -380px);
     top: clamp(10px, 60vw, 280px);
     animation: red-hover 30s linear infinite;
 }
 
 .square-wrapper {
-    transform: translateZ(-2px) scale(1.2);
+    transform: translateZ(-1px) scale(1.1);
 }
 
 .square {
@@ -141,24 +149,23 @@ h1 {
 }
 
 .triangle-wrapper {
-    transform: translateZ(-6px) scale(1.6);
+    transform: translateZ(-8px) scale(1.8);
 }
 
 .triangle {
     transform: scale(.5);
-    right: clamp(-350px, -55vw, -10px);
-    top: clamp(-100px, -8vw, -10px);
+    right: clamp(-450px, -55vw, -270px);
+    top: clamp(-150px, -25vw, -10px);
     animation: triangle-hover 60s linear infinite;
 }
 
 .yellow-wrapper {
     transform: translateZ(-10px) scale(2);
-    z-index: 10;
 }
 
 .yellow-circle {
     transform: scale(1.2);
-    bottom: clamp(10px, 30vw, 150px);
+    bottom: clamp(10px, 50vw, 240px);
     left: clamp(-850px, -10vw, 50px);
     animation: yellow-hover 30s linear infinite;
 }
@@ -204,8 +211,8 @@ h1 {
     }
     
     .triangle {
-        right: -350px;
-        top: -100px;
+        right: -480px;
+        top: -150px;
     }
     
     .yellow-circle {
