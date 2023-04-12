@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 252);
+    background-color: rgb(252, 252, 255);
 }
 
 main {
@@ -12,14 +12,51 @@ main {
     align-items: center;
     overflow-x: hidden;
     height: 100vh;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.scroll {
+    margin-top: 2000px;
 }
 
 #title {
-    font-family: Calistoga;
-    margin-top: 70px;
+    font-family: Roboto;
+    margin-top: 90px;
+    z-index: -1;
 }
 
 .intro {
+    font-size: clamp(20px, 9vw, 70px);
+    font-weight: 500;
+}
+
+#title p {
+    margin: 5px 0;
+}
+
+.build {
+    font-size: clamp(10px, 5vw, 32px);
+    margin-left: 19% !important;
+}
+
+/* .name {
+    font-family: Calistoga;
+    
+} */
+
+.name {
+    color: rgb(255, 108, 68);
+}
+
+/* .name {
+    background: linear-gradient(120deg, rgb(255, 217, 0) 0%, rgb(255, 217, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 80%;
+} */
+
+/* .intro {
     margin: 0;
     font-size: clamp(10px, 5vw, 32px);
     position: relative;
@@ -41,12 +78,19 @@ h1 {
     text-align: end;
     font-size: clamp(10px, 5vw, 32px);
     margin: 0;
-}
+} */
 
 #self, #shapes {
     position: relative;
     display: flex;
     justify-content: center;
+}
+
+#shapes {
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
 
 .shape, .self-img {
@@ -64,10 +108,18 @@ h1 {
     top: clamp(10px, 20vw, 100px);
 }
 
+.hex-wrapper {
+    transform: translateZ(-8px) scale(1.8);
+}
+
 .hex {
     transform: scale(.6);
     left: clamp(-800px, -70vw, 10px);
     animation: hex-hover 90s linear infinite;
+}
+
+.red-wrapper {
+    transform: translateZ(2px) scale(.8);
 }
 
 .red-circle {
@@ -77,11 +129,19 @@ h1 {
     animation: red-hover 30s linear infinite;
 }
 
+.square-wrapper {
+    transform: translateZ(-2px) scale(1.2);
+}
+
 .square {
     transform: scale(1.1);
     top: clamp(10px, 90vw, 400px);
     left: clamp(-550px, -70vw, 10px);
     animation: square-hover 30s linear infinite;
+}
+
+.triangle-wrapper {
+    transform: translateZ(-6px) scale(1.6);
 }
 
 .triangle {
@@ -91,9 +151,14 @@ h1 {
     animation: triangle-hover 60s linear infinite;
 }
 
+.yellow-wrapper {
+    transform: translateZ(-10px) scale(2);
+    z-index: 10;
+}
+
 .yellow-circle {
     transform: scale(1.2);
-    bottom: clamp(10px, 22vw, 110px);
+    bottom: clamp(10px, 30vw, 150px);
     left: clamp(-850px, -10vw, 50px);
     animation: yellow-hover 30s linear infinite;
 }
@@ -120,7 +185,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
 
 
     .hex {
@@ -134,7 +199,7 @@ h1 {
     }
     
     .square {
-        top: 300px;
+        top: 400px;
         left: -550px;
     }
     
@@ -295,7 +360,7 @@ h1 {
     }
 
     50% {
-        transform: translate(-12px, 35px) scale(1.2);
+        transform: translate(-12px, 25px) scale(1.2);
     }
 
     72% {
