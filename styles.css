@@ -12,6 +12,33 @@ header {
     position: fixed;
     background-color: black;
     z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+header img {
+    height: 30px;
+    margin-bottom: 60px;
+}
+
+header img:hover {
+    cursor: pointer;
+}
+
+header img:nth-child(1) {
+    filter: invert(51%) sepia(84%) saturate(1881%) hue-rotate(332deg) brightness(102%) contrast(81%);
+}
+header img:nth-child(2) {
+    filter: invert(71%) sepia(78%) saturate(466%) hue-rotate(322deg) brightness(97%) contrast(97%);
+}
+header img:nth-child(3) {
+    filter: invert(90%) sepia(95%) saturate(1145%) hue-rotate(311deg) brightness(107%) contrast(83%);
+}
+header img:nth-child(4) {
+    margin-bottom: 100px;
+    filter: invert(45%) sepia(99%) saturate(305%) hue-rotate(123deg) brightness(94%) contrast(89%);
 }
 
 #hero {
@@ -28,7 +55,7 @@ header {
     margin-top: 2000px;
 }
 
-#title {
+/* #title {
     font-family: Roboto;
     margin-top: 90px;
     z-index: -1;
@@ -48,6 +75,30 @@ header {
     font-size: clamp(10px, 5vw, 32px);
     position: absolute;
     left: 19%;
+} */
+
+
+#title {
+    font-family: Calistoga;
+    position: relative;
+    bottom: clamp(10px, 8vw, 80px);
+}
+
+#title p {
+    margin: 0;
+}
+
+#elena {
+    font-size: clamp(20px, 18vw, 180px);
+    position: relative;
+    top: clamp(10px, 8vw, 80px);
+    /* right: 10px; */
+}
+
+#brosseau {
+    font-size: clamp(20px, 15vw, 150px);
+    /* position: relative;
+    left: 8vw;     */
 }
 
 /* .name {
@@ -92,6 +143,7 @@ h1 {
 
 #self, #shapes {
     position: relative;
+    bottom: 200px;
     display: flex;
     justify-content: center;
 }
@@ -114,13 +166,17 @@ h1 {
     max-height: 300px;
 }
 
+.shape {
+    transition: filter 1s;
+}
+
 .shape:hover {
     filter: brightness(1.2);
 }
 
 .self-img {
     transform: scale(1.2);
-    top: clamp(10px, 20vw, 100px);
+    top: clamp(10px, 70vw, 100px);
 }
 
 .hex-wrapper {
@@ -135,7 +191,7 @@ h1 {
 }
 
 .red-wrapper {
-    transform: translateZ(2px) scale(.8);
+    transform: translateZ(3px) scale(.7);
 }
 
 .red-circle {
@@ -146,7 +202,7 @@ h1 {
 }
 
 .square-wrapper {
-    transform: translateZ(-1px) scale(1.1);
+    transform: translateZ(2px) scale(.8);
 }
 
 .square {
@@ -183,7 +239,7 @@ h1 {
 
     #title {
         align-self: flex-start;
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
     #self, #shapes {
@@ -209,13 +265,13 @@ h1 {
     }
     
     .red-circle {
-        right: -400px;
+        right: -350px;
         top: 300px;
     }
     
     .square {
-        top: 400px;
-        left: -550px;
+        top: 350px;
+        left: -580px;
     }
     
     .triangle {
