@@ -5,28 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Portfolio v2</title>
 </head>
 <body>
-    <main>
+    <header>
+        <img src="./assets/home.png" alt="">
+        <img src="./assets/idea.png" alt="">
+        <img src="./assets/id-card.png" alt="">
+        <img src="./assets/email.png" alt="">
+    </header>
+    <div id="hero">
+        <!-- <div id="title">
+            <p class="intro">👋 Hi, I'm <span class="name">Elena</span>.</p>
+            <p class="build">I build things for the web.</p>
+        </div> -->
         <div id="title">
-            <p class="intro"><span class="hello">Hello,</span> I'm</p>
-            <h1>Elena Brosseau</h1>
-            <p class="web-dev">Front End Web Developer</p>
+            <p id="elena">Elena</p>
+            <p id="brosseau">Brosseau.</p>
         </div>
         <div id="self">
             <img class="self-img" src="./assets/stuck-at-home-recolored.png" alt="">
         </div>
         <div id="shapes">
-            <img class="shape hex" src="./assets/hex.png" alt="">
-            <img class="shape red-circle" src="./assets/red-circle.png" alt="">   
-            <img class="shape square" src="./assets/square.png" alt="">
-            <img class="shape triangle" src="./assets/triangle.png" alt="">  
-            <img class="shape yellow-circle" src="./assets/yellow-circle.png" alt="">    
+            <div class="hex-wrapper">
+                <img class="shape hex" src="./assets/hex.png" alt="">
+            </div>
+            <div class="red-wrapper">
+                <img class="shape red-circle" src="./assets/red-circle.png" alt="">
+            </div>
+            <div class="square-wrapper">
+                <img class="shape square" src="./assets/square.png" alt="">
+            </div>
+            <div class="triangle-wrapper">
+                <img class="shape triangle" src="./assets/triangle.png" alt="">  
+            </div>
+            <div class="yellow-wrapper">
+                <img class="shape yellow-circle" src="./assets/yellow-circle.png" alt=""> 
+            </div>
         </div>
-    </main>
+        <p class="section-title">Projects.</p>
+        <div class="scroll"></div>
+    </div>
 </body>
 </html>
