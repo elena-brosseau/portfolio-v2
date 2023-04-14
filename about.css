@@ -1,0 +1,89 @@
+
+.about {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.about h2 {
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    box-sizing: content-box;
+    background-color: #264653;
+    padding: 100px  5vw;
+    width: 300vw;
+    z-index: 10;
+    transform: skewY(-7deg);
+}
+
+#hey {
+    font-family: Calistoga;
+    font-size: 36px;
+}
+
+.about p {
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-left: 50px;
+    width: 85%;
+    max-width: 700px;
+    transform: skewY(7deg);
+}
+
+.about-circle-wrapper {
+    transform: translateZ(3px) scale(.7);
+    z-index: -10;
+}
+
+.about-circle {
+    height: 30vw;
+    max-height: 300px;
+    position: absolute;
+    bottom: -200px;
+    right: 10vw;  
+    animation: square-hover 30s linear infinite;
+}
+
+.about-triangle-wrapper {
+    transform: translateZ(1px) scale(.9);
+    z-index: -10;
+}
+
+.about-triangle {
+    height: 50vw;
+    max-height: 300px;
+    position: absolute;
+    bottom: -1050px;
+    left: 10vw;  
+    animation: hex-hover 90s linear infinite;
+}
+
+@media screen and (min-width: 340px) {
+    .about-triangle {
+        bottom: -950px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .about p {
+        margin-left: 90px;
+    }
+
+    .about-circle {
+        bottom: -15vw;
+    }
+
+    .about-triangle {
+        bottom: clamp(-800px, -135vw, -10px);
+    }
+}

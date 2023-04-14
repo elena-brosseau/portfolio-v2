@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./contact.css">
     <title>Portfolio v2</title>
 </head>
 <body>
@@ -17,14 +20,13 @@
         <img src="./assets/id-card.png" alt="">
         <img src="./assets/email.png" alt="">
     </header>
-    <div id="hero">
-        <!-- <div id="title">
-            <p class="intro">👋 Hi, I'm <span class="name">Elena</span>.</p>
-            <p class="build">I build things for the web.</p>
-        </div> -->
+    <main>
         <div id="title">
-            <p id="elena">Elena</p>
-            <p id="brosseau">Brosseau.</p>
+            <h1>
+                <span id="elena">Elena</span>
+                <br>
+                <span id="brosseau">Brosseau.</span>
+            </h1>
             <p id="web-dev">Front End Web Developer</p>
         </div>
         <div id="self">
@@ -47,8 +49,38 @@
                 <img class="shape yellow-circle" src="./assets/yellow-circle.png" alt=""> 
             </div>
         </div>
-        <p class="section-title">Projects.</p>
+        <div class="section projects">
+            <h2 class="section-title">Projects.</h2>
+        </div>
+        <!-- <div class="about-shapes">
+            <img class="about-circle" src="./assets/red-circle.png" alt="">
+        </div> -->
+        <div class="section about">
+            <h2 class="section-title">About Me.</h2>
+            <div class="about-circle-wrapper">
+                <img class="about-circle" src="./assets/red-circle.png" alt="">
+            </div>
+            <div class="about-triangle-wrapper">
+                <img class="about-triangle" src="./assets/triangle.png" alt="">
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <span id="hey">Hey there!</span>
+                        <br><br>
+                        I'm Elena, a self-taught web developer from Long Island, New York. I have a passion for creating beautiful and functional websites that make a difference in people's lives. 
+                        <br><br>
+                        When I'm not coding, you can find me behind the camera lens, working on short films as a cinematographer. I believe that my creative eye and technical skills combine to give me a unique perspective when it comes to designing and developing websites.
+                        <br><br>
+                        Let's build something great together!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section contact">
+            <h2 class="section-title">Contact.</h2>
+        </div>
         <div class="scroll"></div>
-    </div>
+    </main>
 </body>
 </html>
