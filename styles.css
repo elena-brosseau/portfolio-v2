@@ -7,10 +7,10 @@ body {
 }
 
 header {
-    width: 70px;
+    width: 30px;
     height: 100vh;
     position: fixed;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     z-index: 50;
     display: flex;
     flex-direction: column;
@@ -19,8 +19,10 @@ header {
 }
 
 header img {
+    display: none;
     height: 30px;
     margin-bottom: 60px;
+    filter: invert();
 }
 
 header img:hover {
@@ -46,7 +48,7 @@ header img:nth-child(4) {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    height: 1000px;
+    height: 100vh;
     overflow-y: auto;
     perspective: 10px;
 }
@@ -81,7 +83,10 @@ header img:nth-child(4) {
 #title {
     font-family: Calistoga;
     position: relative;
-    bottom: clamp(10px, 8vw, 80px);
+    margin-left: 18px;
+    top: clamp(10px, 20vw, 50px);
+    align-self: flex-start;
+    /* bottom: clamp(-60px, -100vw, -80px); */
 }
 
 #title p {
@@ -89,16 +94,22 @@ header img:nth-child(4) {
 }
 
 #elena {
-    font-size: clamp(20px, 18vw, 180px);
-    position: relative;
-    top: clamp(10px, 8vw, 80px);
-    /* right: 10px; */
+    font-size: clamp(20px, 22vw, 180px);
 }
 
 #brosseau {
-    font-size: clamp(20px, 15vw, 150px);
-    /* position: relative;
-    left: 8vw;     */
+    font-size: clamp(20px, 18vw, 150px);
+    position: relative;
+    bottom: clamp(10px, 6vw, 80px);
+}
+
+.section-title {
+    font-size: clamp(20px, 18vw, 150px);
+    font-family: Calistoga;
+    align-self: flex-start;
+    margin-left: 18px;
+    position: relative;
+    top: 120vw;
 }
 
 /* .name {
@@ -106,9 +117,9 @@ header img:nth-child(4) {
     
 } */
 
-.name {
+/* .name {
     color: rgb(255, 108, 68);
-}
+} */
 
 /* .name {
     background: linear-gradient(120deg, rgb(255, 217, 0) 0%, rgb(255, 217, 0) 100%);
@@ -141,9 +152,12 @@ h1 {
     margin: 0;
 } */
 
+
 #self, #shapes {
     position: relative;
-    bottom: 200px;
+    bottom: clamp(40px, 30vw, 60px);
+    /* bottom: 200px; */
+    /* top: 5vw; */
     display: flex;
     justify-content: center;
 }
@@ -185,7 +199,7 @@ h1 {
 
 .hex {
     transform: scale(.6);
-    left: clamp(-800px, -65vw, -150px);
+    left: clamp(-650px, -65vw, -150px);
     top: 50px;
     animation: hex-hover 90s linear infinite;
 }
@@ -196,8 +210,8 @@ h1 {
 
 .red-circle {
     transform: scale(.8);
-    right: clamp(-450px, -70vw, -10px);
-    top: clamp(10px, 60vw, 280px);
+    right: clamp(-350px, -70vw, -1px);
+    top: 300px;
     animation: red-hover 30s linear infinite;
 }
 
@@ -207,8 +221,8 @@ h1 {
 
 .square {
     transform: scale(1.1);
-    top: clamp(10px, 90vw, 400px);
-    left: clamp(-550px, -70vw, 10px);
+    top: clamp(10px, 100vw, 500px);
+    left: clamp(-550px, -50vw, 10px);
     animation: square-hover 30s linear infinite;
 }
 
@@ -218,8 +232,8 @@ h1 {
 
 .triangle {
     transform: scale(.5);
-    right: clamp(-450px, -55vw, -10px);
-    top: -180px;
+    right: clamp(-400px, -60vw, -10px);
+    top: -80px;
     animation: triangle-hover 60s linear infinite;
 }
 
@@ -229,35 +243,94 @@ h1 {
 
 .yellow-circle {
     transform: scale(1.2);
-    bottom: 300px;
-    left: clamp(-850px, -10vw, 50px);
+    bottom: 180px;
+    left: clamp(-850px, -10vw, -10px);
     animation: yellow-hover 30s linear infinite;
 }
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
+
+    header {
+        width: 70px;
+    }
+
+    header img {
+        display: block;
+    }
 
     #title {
         align-self: flex-start;
-        margin-left: 50px;
+        margin-left: 55px;
+        margin-top: 30px;
+        position: absolute;
+        top: 0;
+        /* bottom: clamp(-10px, -100vw, -80px); */
+    }
+
+    #elena {
+        font-size: clamp(120px, 13vw, 180px);
+    }
+    
+    #brosseau {
+        font-size: clamp(100px, 11vw, 150px);
+        position: relative;
+        bottom: clamp(50px, 6vw, 80px);
+    }
+
+    .section-title {
+        align-self: flex-start;
+        margin-left: 55px;
+        font-size: clamp(100px, 11vw, 150px);
+        top: 800px;
     }
 
     #self, #shapes {
         align-self: flex-end;
+        top: 220px;
     }
 
     #shapes {
-        right: 380px;
+        right: clamp(10px, 28vw, 380px);
     }
 
     .self-img {
-        right: 250px;
+        right: clamp(10px, 18vw, 250px);
         top: 100px;
+    }
+
+    .hex {
+        left: clamp(-750px, -85vw, -150px);
+        top: 50px;
+    }
+
+    .red-circle {
+        right: clamp(-350px, -35vw, -1px);
+        top: 350px;
+    }
+
+    .square {
+        top: clamp(10px, 90vw, 400px);
+        left: clamp(-550px, -90vw, 10px);
+    }
+
+    .triangle {
+        right: clamp(-400px, -45vw, -10px);
+        top: -180px;
+    }
+
+    .yellow-circle {
+        bottom: 220px;
+        left: clamp(-850px, -10vw, -10px);
     }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1100px) {
 
+    #title, .section-title {
+        margin-left: 50px;
+        margin-top: 0;
+    }
 
     .hex {
         left: -900px;
@@ -431,7 +504,7 @@ h1 {
     }
 
     50% {
-        transform: translate(-12px, 25px) scale(1.2);
+        transform: translate(-12px, 5px) scale(1.2);
     }
 
     72% {
