@@ -2,3 +2,89 @@
 .contact h2 {
     margin-top: 200px;
 }
+
+.contact-container {
+    width: calc(100vw - 30px);
+    max-width: 1000px;
+    position: relative;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form {
+    width: 70%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: clamp(15px, 7vw, 20px) clamp(15px, 7vw, 100px);
+}
+
+.contact form p {
+    width: 100%;
+    font-family: Calistoga;
+    font-size: 36px;
+    margin: 20px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    font-size: 1rem;
+    font-family: Roboto;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: clamp(5px, 2vw, 15px);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.submit {
+    background-color: #264653;
+    color: white;
+    border: none;
+}
+
+.contact-info {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    width: 70%;
+    max-width: 400px;
+    margin: clamp(15px, 7vw, 20px) clamp(15px, 7vw, 100px);
+}
+
+.contact-info img {
+    height: clamp(10px, 8vw, 40px);
+}
+
+.contact-info p {
+    font-family: Roboto;
+    font-size: clamp(10px, 4vw, 22px);
+    margin-left: clamp(5px, 5vw, 10px);
+}
+
+@media screen and (min-width: 600px) {
+
+    .contact-container {
+        width: calc(100vw - 70px);
+        left: 70px;
+        align-items: flex-start;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .contact-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-info {
+        margin: 0;
+    }
+}
