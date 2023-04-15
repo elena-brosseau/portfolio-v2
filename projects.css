@@ -1,6 +1,6 @@
 
 .projects h2 {
-    margin-bottom: 100px;
+    margin-bottom: clamp(10px, 12vw, 80px);
 }
 
 .projects-content {
@@ -12,37 +12,153 @@
     align-items: center;
 }
 
-.projects-list {
-    width: 90%;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Browser */
+
+.browser-container {
+    width: 70vw;
+    max-width: 500px;
 }
 
-.project {
-    width: 60vw;
-    max-width: 250px;
-    margin: 30px 2vw;
+.browser {
+    width: 70vw;
+    max-width: 500px;
+    height: 70vw;
+    max-height: 500px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.browser-header {
+    width: 100%;
+    height: 12%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 3%;
+}
+
+.browser-circles {
+    width: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.browser-circle {
+    width: 2vw;
+    max-width: 14px;
+    height: 2vw;
+    max-height: 14px;
+    border-radius: 50%;
+}
+
+.browser-circle:nth-child(1) {
+    background-color: rgb(245, 94, 53);
+}
+
+.browser-circle:nth-child(2) {
+    background-color: rgb(250, 211, 83);
+}
+
+.browser-circle:nth-child(3) {
+    background-color: rgb(93, 209, 93);
+}
+
+.url-bar {
+    background-color: rgb(245, 245, 245);
+    height: fit-content;
+    width: 60%;
+    height: 65%;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
     align-items: center;
 }
 
-.project-preview {
-    width: 60vw;
-    max-width: 250px;
-    height: 60vw;
-    max-height: 250px;
-    border: 1px solid black;
-    border-radius: 5px;
+.url-bar p {
+    font-family: Helvetica;
+    font-size: clamp(5px, 2.5vw, 17.5px);
+    color: rgb(76, 76, 76);
+    margin: clamp(5px, 1.5vw, 10.5px);
 }
 
+.browser-menu {
+    width: 8%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 2%;
+}
 
-.projects p {
+.menu-bar {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(186, 186, 186);
+    border-radius: 100px;
+}
+
+.browser-content {
+    width: 100%;
+    height: 88%;
+    background-color: white;
+}
+
+.project-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: clamp(5px, 7vw, 30px);
+}
+
+.project-nav-buttons button {
+    padding: 5px 20px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-nav-buttons button img {
+    height: 5vw;
+    max-height: 35px;
+}
+
+/* Project Info */
+
+.project-info {
+    width: 70vw;
+    max-width: 500px;
     font-family: Roboto;
-    font-size: 20px;
-    text-align: center;
+    line-height: 1.5;
+    margin: clamp(5px, 5vw, 20px) 0;
+}
+
+.project-info h3 {
+    font-size: 24px;
+}
+
+.link-buttons {
+    margin-top: clamp(5px, 8vw, 40px);
+}
+
+.link-buttons button {
+    font-family: Roboto;
+    font-size: 18px;
+    color: white;
+    background-color: #264653;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.link-buttons button:nth-child(2) {
+    background-color: #2a9d8f;
+    margin-left: clamp(5px, 5vw, 10px)
 }
 
 
@@ -53,24 +169,42 @@
         left: 70px;
     }
 
-    .project {
-        width: 30vw;
-    }
-
-    .project-preview {
-        width: 30vw;
-        height: 30vw;
-    }
 }
 
 @media screen and (min-width: 900px){
 
-    .project {
-        width: 20vw;
+    .projects-content {
+        flex-direction: row;
+        box-sizing: border-box;
     }
 
-    .project-preview {
-        width: 20vw;
-        height: 20vw;
+    .browser-container {
+        width: 40vw;
+        max-width: 450px;
+        margin-left: clamp(10px, 8vw, 150px);
+    }
+
+    .browser {
+        width: 40vw;
+        max-width: 450px;
+        height: 40vw;
+        max-height: 450px;
+    }
+
+    .browser-circle {
+        max-width: 12px;
+        max-height: 12px;
+    }
+
+    .url-bar p {
+        font-size: clamp(5px, 2.5vw, 16px);
+        margin: clamp(5px, 1.5vw, 9.5px);
+    }
+
+    .project-info {
+        width: 30vw;
+        margin: 0 clamp(5px, 8vw, 70px);
+        position: relative;
+        bottom: 5vw;
     }
 }
