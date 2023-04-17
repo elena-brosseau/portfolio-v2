@@ -61,7 +61,7 @@ main {
     width: 100%;
     position: relative;
     top: 110vw;
-    margin-top: 8vw;
+    margin-top: clamp(5px, 8vw, 30px);
 }
 
 .section-title {
@@ -98,5 +98,22 @@ main {
     .section-title {
         margin-left: 55px;
         margin-top: 0;
+    }
+}
+
+@media screen and (max-height: 450px) {
+
+    header {
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 4% 0;
+    }
+    
+    header img {
+        margin-bottom: 0;
+    }
+
+    header img:nth-child(4) {
+        margin-bottom: 0;
     }
 }

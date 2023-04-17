@@ -2,6 +2,7 @@
 
 .contact h2 {
     margin-top: 200px;
+    margin-bottom: 40px;
 }
 
 .contact-container {
@@ -16,7 +17,7 @@
 }
 
 .contact form {
-    width: 70%;
+    width: 80%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
     width: 100%;
     font-family: Calistoga;
     font-size: 36px;
+    font-style: italic;
     margin: 20px;
 }
 

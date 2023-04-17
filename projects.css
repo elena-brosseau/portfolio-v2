@@ -1,6 +1,7 @@
 
 .projects h2 {
     margin-bottom: clamp(10px, 12vw, 80px);
+    margin-top: 16vw;
 }
 
 .projects-content {
@@ -16,14 +17,14 @@
 
 .browser-container {
     width: 70vw;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .browser {
     width: 70vw;
-    max-width: 500px;
+    max-width: 400px;
     height: 70vw;
-    max-height: 500px;
+    max-height: 400px;
     background-color: rgb(238, 238, 238);
     box-shadow: 5px 5px 0 rgb(0, 0, 0);
     border-radius: 10px;
@@ -49,9 +50,9 @@
 
 .browser-circle {
     width: 2vw;
-    max-width: 14px;
+    max-width: 11px;
     height: 2vw;
-    max-height: 14px;
+    max-height: 11px;
     border-radius: 50%;
 }
 
@@ -80,9 +81,9 @@
 
 .url-bar p {
     font-family: Helvetica;
-    font-size: clamp(5px, 2.5vw, 17.5px);
+    font-size: clamp(5px, 2.5vw, 12.5px);
     color: rgb(76, 76, 76);
-    margin: clamp(5px, 1.5vw, 10.5px);
+    margin: clamp(5px, 1.5vw, 7.5px);
 }
 
 .browser-menu {
@@ -108,6 +109,10 @@
     background-color: white;
 }
 
+.browser-content video {
+    width: 100%;
+}
+
 .project-nav-buttons {
     display: flex;
     justify-content: space-between;
@@ -131,7 +136,7 @@
 
 .project-info {
     width: 70vw;
-    max-width: 500px;
+    max-width: 400px;
     font-family: Roboto;
     line-height: 1.5;
     margin: clamp(5px, 5vw, 20px) 0;
@@ -149,24 +154,37 @@
     font-family: Roboto;
     font-size: 18px;
     color: white;
-    background-color: #264653;
+    background-color: #2a9d8f;
     border: none;
     border-radius: 5px;
     padding: 10px 30px;
     cursor: pointer;
 }
 
-.link-buttons button:nth-child(2) {
-    background-color: #2a9d8f;
-    margin-left: clamp(5px, 5vw, 10px)
+.link-buttons button:nth-child(1) {
+    background-color: #264653;
+    margin-right: clamp(5px, 5vw, 10px);
+    margin-bottom: clamp(5px, 7vw, 15px);
 }
 
 
 @media screen and (min-width: 600px){
 
+    .projects h2 {
+        margin-top: 0;
+    }
+
     .projects-content {
         width: calc(100vw - 70px);
         left: 70px;
+    }
+
+    .project-nav-buttons {
+        justify-content: center;
+    }
+
+    .project-nav-buttons button {
+        margin: 0 5%;
     }
 
 }
@@ -175,20 +193,18 @@
 
     .projects-content {
         flex-direction: row;
+        justify-content: center;
         box-sizing: border-box;
     }
 
     .browser-container {
         width: 40vw;
-        max-width: 450px;
         margin-left: clamp(10px, 8vw, 150px);
     }
 
     .browser {
         width: 40vw;
-        max-width: 450px;
         height: 40vw;
-        max-height: 450px;
     }
 
     .browser-circle {
