@@ -2,17 +2,21 @@
 .about {
     position: relative;
     transform-style: preserve-3d;
+    z-index: 10;
 }
 
 .about h2 {
     margin-bottom: 50px;
-    margin-top: 100px;
     z-index: 1;
 }
 
 .about-content {
+    width: calc(100vw - 30px);
+    position: relative;
+    left: 30px;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 
 .about-text {
@@ -22,6 +26,10 @@
     width: 300vw;
     z-index: 10;
     transform: skewY(-7deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #hey {
@@ -34,10 +42,39 @@
     font-family: Roboto;
     font-size: 18px;
     line-height: 1.5;
-    margin-left: 50px;
     width: 85%;
-    max-width: 700px;
+    max-width: 500px;
     transform: skewY(7deg);
+}
+
+.skills {
+    width: 85%;
+    max-width: 500px;
+}
+
+.skills p {
+    margin: 50px 0 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.skills-list {
+    opacity: 0;
+    transform: skewY(7deg);
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #e76f51;
+    margin: 3px;
+    padding: 5px 8px;
 }
 
 .about-circle-wrapper {
@@ -52,6 +89,7 @@
     bottom: -200px;
     right: 10vw;  
     animation: square-hover 30s linear infinite;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(6839%) hue-rotate(312deg) brightness(95%) contrast(102%);
 }
 
 .about-triangle-wrapper {
@@ -76,15 +114,28 @@
 
 @media screen and (min-width: 600px) {
 
-    .about p {
-        margin-left: 90px;
+    .about-content {
+        width: calc(100vw - 70px);
+        left: 70px;
     }
 
     .about-circle {
-        bottom: -15vw;
+        bottom: -30vw;
     }
 
     .about-triangle {
-        bottom: clamp(-800px, -135vw, -10px);
+        bottom: clamp(-850px, -120vw, -10px);
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .about-text {
+        flex-direction: row;
+    }
+
+    .skills {
+        width: clamp(100px, 85%, 400px);
+        margin-left: 50px;
     }
 }

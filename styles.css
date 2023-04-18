@@ -61,7 +61,7 @@ main {
     width: 100%;
     position: relative;
     top: 110vw;
-    margin-top: clamp(5px, 8vw, 30px);
+    margin-top: clamp(5px, 8vw, 100px);
 }
 
 .section-title {
@@ -70,7 +70,67 @@ main {
     font-weight: normal;
     align-self: flex-start;
     margin: 0 0 0 20px;
+    display: none;
 }
+
+
+.fadeIn, .fadeDown {
+    opacity: 0;
+}
+
+.animateFadeIn {
+    animation: animateFadeIn 2s forwards;
+}
+
+.animateFadeDown {
+    animation: animateFadeDown 1s forwards;
+}
+
+.skewFadeDown {
+    animation: skewFadeDown 1s forwards;
+}
+
+@keyframes animateFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animateFadeDown {
+    0% {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes skewFadeDown {
+    0% {
+        opacity: 0;
+        transform: translate(0, 50px) skewY(7deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) skewY(7deg);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 @media screen and (min-width: 600px) {
     
@@ -83,7 +143,7 @@ main {
     }
 
     .section {
-        top: 800px;
+        top: 700px;
     }
 
     .section-title {

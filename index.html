@@ -17,8 +17,8 @@
 <body>
     <header>
         <img src="./assets/home.png" alt="">
-        <img src="./assets/idea.png" alt="">
         <img src="./assets/id-card.png" alt="">
+        <img src="./assets/idea.png" alt="">
         <img src="./assets/email.png" alt="">
     </header>
     <main>
@@ -50,10 +50,58 @@
                 <img class="shape yellow-circle" src="./assets/yellow-circle.png" alt=""> 
             </div>
         </div>
+        
+        <div class="section about">
+            <h2 class="section-title fadeDown">About Me.</h2>
+            <!-- <div class="about-circle-wrapper">
+                <img class="about-circle" src="./assets/yellow-circle.png" alt="">
+            </div>
+            <div class="about-triangle-wrapper">
+                <img class="about-triangle" src="./assets/triangle.png" alt="">
+            </div> -->
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="fadeIn">
+                        <span id="hey">Hey there!</span>
+                        <br><br>
+                        I'm Elena, a self-taught web developer from Long Island, New York. I have a passion for creating beautiful and functional websites that make a difference in people's lives. 
+                        <br><br>
+                        When I'm not coding, you can find me behind the camera lens, working on short films as a cinematographer. I believe that my creative eye and technical skills combine to give me a unique perspective when it comes to designing and developing websites.
+                        <br><br>
+                        Let's build something great together!
+                    </p>
+                    <div class="skills">
+                        <p class="fadeIn">Hard Skills:</p>
+                        <ul class="skills-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript ES6</li>
+                            <li>React.js</li>
+                            <li>Git</li>
+                        </ul>
+                        <p class="fadeIn">Soft Skills:</p>
+                        <ul class="skills-list">
+                            <li>Problem Solving</li>
+                            <li>Communication</li>
+                            <li>Project Management</li>
+                            <li>Self-Learning</li>
+                            <li>People Skills</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section projects">
-            <h2 class="section-title">Projects.</h2>
+            <h2 class="section-title fadeDown">Projects.</h2>
+            <p class="projects-title fadeDown">Selected Projects</p>
+            <div class="projects-circle-wrapper">
+                <img class="projects-circle" src="./assets/red-circle.png" alt="">
+            </div>
+            <div class="projects-hex-wrapper">
+                <img class="projects-hex" src="./assets/hex.png" alt="">
+            </div>
             <div class="projects-content">
-                <div class="browser-container">
+                <div class="browser-container fadeIn">
                     <div class="browser">
                         <div class="browser-header">
                             <div class="browser-circles">
@@ -83,7 +131,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="project-info">
+                <div class="project-info fadeDown">
                     <h3>Project Name</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="link-buttons">
@@ -91,63 +139,23 @@
                         <button>Live Site</button>
                     </div>
                 </div>
-                <!-- <div class="projects-list">
-                    <div class="project">
-                        <div class="project-preview"></div>
-                        <p class="project-title">Appointment Scheduler</p>
-                    </div>
-                    <div class="project">
-                        <div class="project-preview"></div>
-                        <p class="project-title">Shopify Template</p>
-                    </div>
-                    <div class="project">
-                        <div class="project-preview"></div>
-                        <p class="project-title">Chess</p>
-                    </div>
-                    <div class="project">
-                        <div class="project-preview"></div>
-                        <p class="project-title">API Project</p>
-                    </div>
-                    <div class="project">
-                        <div class="project-preview"></div>
-                        <p class="project-title">Production Company</p>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="section about">
-            <h2 class="section-title">About Me.</h2>
-            <div class="about-circle-wrapper">
-                <img class="about-circle" src="./assets/red-circle.png" alt="">
-            </div>
-            <div class="about-triangle-wrapper">
-                <img class="about-triangle" src="./assets/triangle.png" alt="">
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        <span id="hey">Hey there!</span>
-                        <br><br>
-                        I'm Elena, a self-taught web developer from Long Island, New York. I have a passion for creating beautiful and functional websites that make a difference in people's lives. 
-                        <br><br>
-                        When I'm not coding, you can find me behind the camera lens, working on short films as a cinematographer. I believe that my creative eye and technical skills combine to give me a unique perspective when it comes to designing and developing websites.
-                        <br><br>
-                        Let's build something great together!
-                    </p>
-                </div>
             </div>
         </div>
         <div class="section contact">
-            <h2 class="section-title">Contact.</h2>
+            <h2 class="section-title fadeDown">Contact.</h2>
             <div class="contact-container">
-                <form>
+                <form 
+                    action="https://formspree.io/f/mdovyoye"
+                    method="POST"
+                    class="fadeIn"
+                >
                     <p>Drop me a line!</p>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea cols="30" rows="10" placeholder="Message"></textarea>
-                    <input class="submit" type="submit" value="Send">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea cols="30" rows="10" name="message" placeholder="Message"></textarea>
+                    <input class="submit"  name="submit" type="submit" value="Send">
                 </form>
-                <div class="contact-info">
+                <div class="contact-info fadeDown">
                     <img src="./assets/email.png" alt="">
                     <p>elenabrosseau@gmail.com</p>
                     <img src="./assets/github.png" alt="">
@@ -159,5 +167,6 @@
         </div>
         <div class="scroll"></div>
     </main>
+    <script src="./scripts.js"></script>
 </body>
 </html>

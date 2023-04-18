@@ -14,6 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .contact form {
@@ -42,12 +43,14 @@
     padding: clamp(5px, 2vw, 15px);
     border: 1px solid black;
     border-radius: 3px;
+    box-shadow: 5px 5px 0 black;
 }
 
 .submit {
     background-color: #264653;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .contact-info {
@@ -61,7 +64,7 @@
 }
 
 .contact-info img {
-    height: clamp(10px, 8vw, 40px);
+    height: clamp(10px, 8vw, 30px);
 }
 
 .contact-info p {
