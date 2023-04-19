@@ -80,6 +80,23 @@ main {
     /* display: none; */
 }
 
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0 !important;
+    box-sizing: border-box;
+    padding: 5px 20px;
+}
+
+footer p {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
 
 .fadeIn, .fadeDown {
     opacity: 0;
@@ -156,7 +173,7 @@ main {
     .section-title {
         /* align-self: flex-start; */
         /* margin-left: 60px; */
-        font-size: clamp(80px, 9vw, 100px);
+        font-size: clamp(60px, 8vw, 100px);
     }
 }
 
