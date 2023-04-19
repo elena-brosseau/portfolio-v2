@@ -25,10 +25,9 @@
 }
 
 .contact-container {
-    width: calc(100vw - 30px);
+    width: 100vw;
     /* max-width: 1000px; */
     position: relative;
-    left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -82,8 +81,17 @@
     align-items: center;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto;
-    width: 70%;
     max-width: 400px;
+}
+
+.contact-info.lower {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.contact-info.upper {
+    display: none;
+    width: 70%;
     margin: clamp(15px, 7vw, 20px) clamp(15px, 7vw, 100px);
 }
 
@@ -118,5 +126,13 @@
 
     .contact-info {
         margin: 20px 10px;
+    }
+
+    .contact-info.lower {
+        display: none;
+    }
+
+    .contact-info.upper {
+        display: grid;
     }
 }

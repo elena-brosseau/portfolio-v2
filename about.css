@@ -11,9 +11,8 @@
 }
 
 .about-content {
-    width: calc(100vw - 30px);
+    width: 100vw;
     position: relative;
-    left: 30px;
     display: flex;
     align-items: center;
     margin-top: 50px;
