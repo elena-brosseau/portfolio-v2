@@ -44,3 +44,17 @@ const handleScrollAnimation = () => {
 document.querySelector('main').addEventListener('scroll', () => {
   handleScrollAnimation();
 })
+
+
+
+///////
+
+const header = document.querySelector('header');
+
+header.onmouseenter = () => {
+    header.classList.add('open')
+}
+
+header.onmouseleave = () => {
+    header.classList.remove('open')
+}

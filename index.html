@@ -16,10 +16,22 @@
 </head>
 <body>
     <header>
-        <img src="./assets/home.png" alt="">
-        <img src="./assets/id-card.png" alt="">
-        <img src="./assets/idea.png" alt="">
-        <img src="./assets/email.png" alt="">
+        <div class="nav-item">
+            <img src="./assets/home.png" alt="">
+            <p>Home</p>
+        </div>
+        <div class="nav-item">
+            <img src="./assets/id-card.png" alt="">
+            <p>About</p>
+        </div>
+        <div class="nav-item">
+            <img src="./assets/idea.png" alt="">
+            <p>Projects</p>
+        </div>
+        <div class="nav-item">
+            <img src="./assets/email.png" alt="">
+            <p>Contact</p>
+        </div>
     </header>
     <main>
         <div id="title">
@@ -52,7 +64,7 @@
         </div>
         
         <div class="section about">
-            <h2 class="section-title fadeDown">About Me.</h2>
+            <!-- <h2 class="section-title fadeDown">About Me.</h2> -->
             <!-- <div class="about-circle-wrapper">
                 <img class="about-circle" src="./assets/yellow-circle.png" alt="">
             </div>
@@ -64,9 +76,9 @@
                     <p class="fadeIn">
                         <span id="hey">Hey there!</span>
                         <br><br>
-                        I'm Elena, a self-taught web developer from Long Island, New York. I have a passion for creating beautiful and functional websites that make a difference in people's lives. 
+                        I'm Elena, a self-taught front-end developer who's passionate about visual storytelling, education, and all things tech. I'm a film school grad who's always been interested in the intersection of storytelling and technology.
                         <br><br>
-                        When I'm not coding, you can find me behind the camera lens, working on short films as a cinematographer. I believe that my creative eye and technical skills combine to give me a unique perspective when it comes to designing and developing websites.
+                        As a developer, I love to play around with different design elements and experiment with new technologies. I'm proficient in HTML, CSS, JavaScript, and React, and I'm always on the lookout for new tools and frameworks to add to my toolkit. Whether I'm building a website or a mobile app, I always strive to create something that looks great and works flawlessly.
                         <br><br>
                         Let's build something great together!
                     </p>
@@ -92,7 +104,7 @@
             </div>
         </div>
         <div class="section projects">
-            <h2 class="section-title fadeDown">Projects.</h2>
+            <!-- <h2 class="section-title fadeDown">Projects.</h2> -->
             <p class="projects-title fadeDown">Selected Projects</p>
             <div class="projects-circle-wrapper">
                 <img class="projects-circle" src="./assets/red-circle.png" alt="">
@@ -142,30 +154,30 @@
             </div>
         </div>
         <div class="section contact">
-            <h2 class="section-title fadeDown">Contact.</h2>
             <div class="contact-container">
+                <div>
+                    <h2 class="section-title fadeDown">Let's Get <br> in Touch</h2>
+                    <div class="contact-info fadeDown">
+                        <img src="./assets/email.png" alt="">
+                        <p>elenabrosseau@gmail.com</p>
+                        <img src="./assets/github.png" alt="">
+                        <p>github.com/HelloGonzo</p>
+                        <img src="./assets/linkedin.png" alt="">
+                        <p>Elena Brosseau</p>
+                    </div>
+                </div>
                 <form 
                     action="https://formspree.io/f/mdovyoye"
                     method="POST"
                     class="fadeIn"
                 >
-                    <p>Drop me a line!</p>
                     <input type="text" name="name" placeholder="Name">
                     <input type="email" name="email" placeholder="Email">
                     <textarea cols="30" rows="10" name="message" placeholder="Message"></textarea>
                     <input class="submit"  name="submit" type="submit" value="Send">
                 </form>
-                <div class="contact-info fadeDown">
-                    <img src="./assets/email.png" alt="">
-                    <p>elenabrosseau@gmail.com</p>
-                    <img src="./assets/github.png" alt="">
-                    <p>github.com/HelloGonzo</p>
-                    <img src="./assets/linkedin.png" alt="">
-                    <p>Elena Brosseau</p>
-                </div>
             </div>
         </div>
-        <div class="scroll"></div>
     </main>
     <script src="./scripts.js"></script>
 </body>

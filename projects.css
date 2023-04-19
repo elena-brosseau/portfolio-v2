@@ -160,13 +160,12 @@
 }
 
 .projects-circle {
-    height: 60vw;
-    max-height: 600px;
+    display: none;
+    height: clamp(500px, 60vw, 600px);
     position: absolute;
     top: -80px;
-    left: 12vw;
+    right: 28vw;
     animation: square-hover 30s linear infinite;
-    
 }
 
 .projects-hex-wrapper {
@@ -175,11 +174,12 @@
 }
 
 .projects-hex {
+    display: none;
     height: 50vw;
     max-height: 300px;
     position: absolute;
-    right: 2vw;
-    bottom: -10px;
+    right: clamp(-100px, -20vw, -10px);
+    top: -300px;
     animation: triangle-hover 90s linear infinite;
     filter: brightness(0) saturate(100%) invert(48%) sepia(75%) saturate(384%) hue-rotate(123deg) brightness(92%) contrast(89%);
 }
@@ -245,6 +245,23 @@
         margin: 0 5%;
     }
 
+    .projects-hex {
+        display: block;
+        top: -400px;
+    }
+
+    .projects-circle {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    .projects-hex {
+        right: clamp(-40px, -20vw, -10px);
+        top: -350px;
+    }
 }
 
 @media screen and (min-width: 900px){
@@ -280,5 +297,23 @@
         margin: 0 clamp(5px, 8vw, 70px);
         position: relative;
         bottom: 5vw;
+    }
+
+    .projects-hex {
+        right: 2vw;
+        bottom: -10px;
+    }
+
+    .projects-circle {
+        top: -80px;
+        right: 40vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .projects-circle {
+        top: -80px;
+        right: 45vw;
     }
 }
