@@ -1,4 +1,6 @@
 
+/////// Fade on Scroll 
+
 const fadeIns = Array.from(document.querySelectorAll('.fadeIn'));
 const fadeDowns = Array.from(document.querySelectorAll('.fadeDown'));
 const skewFades = Array.from(document.querySelectorAll('.skills-list'))
@@ -47,14 +49,26 @@ document.querySelector('main').addEventListener('scroll', () => {
 
 
 
-///////
+/////// Mobile Nav
 
-const header = document.querySelector('header');
+const menuIcon = document.querySelector('.menu-icon'),
+      header = document.querySelector('header');
+      navLinks = Array.from(document.querySelectorAll('.nav-mobile a'))
 
-header.onmouseenter = () => {
-    header.classList.add('open')
-}
 
-header.onmouseleave = () => {
-    header.classList.remove('open')
+menuIcon.onclick = toggleNav;
+
+navLinks.forEach(link => {
+    link.onclick = toggleNav;
+})
+
+function toggleNav() {
+
+    if (menuIcon.src === 'file:///Users/gonzo/Documents/projects/portfolio%20v2/assets/menu.png') {
+        menuIcon.src = './assets/close.png';
+    } else {
+        menuIcon.src = './assets/menu.png';
+    };
+
+    header.classList.toggle('open');
 }

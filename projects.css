@@ -8,10 +8,6 @@
     top: 500px; */
 }
 
-.projects h2 {
-    margin-bottom: clamp(10px, 12vw, 80px);
-    margin-top: 16vw;
-}
 
 .projects-title {
     width: 100vw;
@@ -193,8 +189,9 @@
     margin: clamp(5px, 5vw, 20px) 0;
 }
 
-.project-info h3 {
+.project-name {
     font-size: 24px;
+    font-weight: bold;
 }
 
 .link-buttons {
@@ -220,10 +217,6 @@
 
 
 @media screen and (min-width: 600px){
-
-    .projects h2 {
-        margin-top: 0;
-    }
 
     .projects-title {
         width: calc(100vw - 70px);

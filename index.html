@@ -16,24 +16,44 @@
 </head>
 <body>
     <header>
-        <div class="nav-item">
-            <img src="./assets/home.png" alt="">
-            <p>Home</p>
+        <div class="menu-icon-container">
+            <img class="menu-icon" src="./assets/menu.png" alt="">
         </div>
-        <div class="nav-item">
-            <img src="./assets/id-card.png" alt="">
-            <p>About</p>
-        </div>
-        <div class="nav-item">
-            <img src="./assets/idea.png" alt="">
-            <p>Projects</p>
-        </div>
-        <div class="nav-item">
-            <img src="./assets/email.png" alt="">
-            <p>Contact</p>
-        </div>
+        <nav class="nav-mobile">
+            <a href="#home-link">
+                <p>HOME</p>
+            </a>
+            <a href="#about-link">
+                <p>ABOUT</p>
+            </a>
+            <a href="#projects-link">
+                <p>PROJECTS</p>
+            </a>
+            <a href="#contact-link">
+                <p>CONTACT</p>
+            </a>
+        </nav>
+        <nav class="nav-desktop">
+            <a href="#home-link" class="nav-item">
+                <img src="./assets/home.png" alt="">
+                <p>HOME</p>
+            </a>
+            <a href="#about-link" class="nav-item">
+                <img src="./assets/id-card.png" alt="">
+                <p>ABOUT</p>
+            </a>
+            <a href="#projects-link" class="nav-item">
+                <img src="./assets/idea.png" alt="">
+                <p>PROJECTS</p>
+            </a>
+            <a href="#contact-link" class="nav-item">
+                <img src="./assets/email.png" alt="">
+                <p>CONTACT</p>
+            </a>
+        </nav>
     </header>
     <main>
+        <div id="home-link"></div>
         <div id="title">
             <h1>
                 <span id="elena">Elena</span>
@@ -62,15 +82,7 @@
                 <img class="shape yellow-circle" src="./assets/yellow-circle.png" alt=""> 
             </div>
         </div>
-        
         <div class="section about">
-            <!-- <h2 class="section-title fadeDown">About Me.</h2> -->
-            <!-- <div class="about-circle-wrapper">
-                <img class="about-circle" src="./assets/yellow-circle.png" alt="">
-            </div>
-            <div class="about-triangle-wrapper">
-                <img class="about-triangle" src="./assets/triangle.png" alt="">
-            </div> -->
             <div class="about-content">
                 <div class="about-text">
                     <p class="fadeIn">
@@ -103,8 +115,8 @@
                 </div>
             </div>
         </div>
+        <div id="about-link"></div>
         <div class="section projects">
-            <!-- <h2 class="section-title fadeDown">Projects.</h2> -->
             <p class="projects-title fadeDown">Selected Projects</p>
             <div class="projects-circle-wrapper">
                 <img class="projects-circle" src="./assets/red-circle.png" alt="">
@@ -144,7 +156,7 @@
                     </div>
                 </div>
                 <div class="project-info fadeDown">
-                    <h3>Project Name</h3>
+                    <p class="project-name" >Project Name</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="link-buttons">
                         <button>GitHub</button>
@@ -153,15 +165,16 @@
                 </div>
             </div>
         </div>
+        <div id="projects-link"></div>
         <img src="assets/wave.png" alt="" class="section wave">
         <div class="section contact">
             <div class="contact-container">
                 <div>
-                    <h2 class="section-title fadeDown">
+                    <p class="contact-title fadeDown">
                         Let's Get
                         <br>
                         <span>in Touch</span>
-                    </h2>
+                    </p>
                     <div class="contact-info upper fadeDown">
                         <img src="./assets/email.png" alt="">
                         <p>elenabrosseau@gmail.com</p>
@@ -191,6 +204,7 @@
                 </div>
             </div>
         </div>
+        <div id="contact-link"></div>
         <footer class="section">
             <p>Website Designed and Built by Elena Brosseau</p>
         </footer>

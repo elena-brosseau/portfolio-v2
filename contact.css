@@ -1,15 +1,5 @@
 
 
-/* .contact {
-    background-color: #2a9d8f;
-    padding-bottom: 50px;
-    margin-top: 200px;
-} */
-
-/* .contact h2 {
-    margin-top: 200px;
-    margin-bottom: 40px;
-} */
 
 .contact {
     margin: 0 !important;
@@ -20,7 +10,17 @@
     margin-top: 100px !important;
 }
 
-.contact h2 span {
+.contact-title {
+    font-size: clamp(20px, 15vw, 80px);
+    font-family: Calistoga;
+    font-weight: normal;
+    align-self: center;
+    margin: 0 0 30px 0;
+    text-align: center;
+    /* display: none; */
+}
+
+.contact-title span {
     color: #ffd773;
 }
 
@@ -92,7 +92,7 @@
 .contact-info.upper {
     display: none;
     width: 70%;
-    margin: clamp(15px, 7vw, 20px) clamp(15px, 7vw, 100px);
+    margin: clamp(15px, 7vw, 20px) 1vw;
 }
 
 .contact-info img {
@@ -122,6 +122,11 @@
     .contact-container {
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    .contact-title {
+        font-size: clamp(60px, 8vw, 100px);
+        margin: 0;
     }
 
     .contact-info {
