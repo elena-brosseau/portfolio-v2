@@ -100,11 +100,23 @@
     filter: invert(87%) sepia(100%) saturate(451%) hue-rotate(316deg) brightness(102%) contrast(101%);
 }
 
-.contact-info p {
+.contact-info p, .contact-info a {
     font-family: Roboto;
     font-size: clamp(10px, 4vw, 18px);
     margin: 12px;
     margin-left: clamp(5px, 5vw, 10px);
+    color: #ffd773;
+}
+
+.contact-info a {
+    cursor: pointer;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+.contact-info a:active {
     color: #ffd773;
 }
 
