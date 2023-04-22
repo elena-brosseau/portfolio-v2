@@ -33,8 +33,8 @@
     font-size: clamp(10px, 5vw, 33px);
     position: relative;
     bottom: clamp(10px, 7vw, 93px);
-    left: 12px;
-    padding: 1vw 0 0 2vw;
+    left: 6px;
+    padding: 1vw 0 0 3vw;
     border-top: 2px solid black;
 }
 
@@ -157,6 +157,7 @@
 
     #web-dev {
         font-size: clamp(24px, 3vw, 33px);
+        bottom: clamp(60px, 7vw, 93px);
     }
 
     #self, #shapes {

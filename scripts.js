@@ -64,7 +64,7 @@ navLinks.forEach(link => {
 
 function toggleNav() {
 
-    if (menuIcon.src === 'file:///Users/gonzo/Documents/projects/portfolio%20v2/assets/menu.png') {
+    if (!header.classList.contains('open')) {
         menuIcon.src = './assets/close.png';
     } else {
         menuIcon.src = './assets/menu.png';
