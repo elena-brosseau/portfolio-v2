@@ -88,14 +88,14 @@ let i = 0;
 
 const projects = [
     {
-        video: 'https://media.githubusercontent.com/media/elena-brosseau/portfolio-v2/master/assets/testing-center-screen-record.webm',
+        video: './assets/testing-center-screen-record.webm',
         title: 'Testing Center',
         description: 'Single page appointment scheduler app, created to fill a need at my current job. Built with React, Redux, React Router, and Jest.',
         github: 'https://github.com/elena-brosseau/testing-center-2',
         live: 'https://elena-brosseau.github.io/testing-center-2/'
     },
     {
-        video: 'https://media.githubusercontent.com/media/elena-brosseau/portfolio-v2/master/assets/ouch-screen-record.webm',
+        video: './assets/ouch-screen-record.webm',
         title: 'Ouch Productions',
         description: 'A minimalist homepage for a media production company, inclucing video previews of each of their featured projects. Built with HTML, CSS, and Javascript.',
         github: 'https://github.com/elena-brosseau/ouch',
