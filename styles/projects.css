@@ -209,7 +209,7 @@
     cursor: pointer;
 }
 
-.link-buttons button:nth-child(1) {
+.link-buttons a:nth-child(1) button {
     background-color: #264653;
     margin-right: clamp(5px, 5vw, 10px);
     margin-bottom: clamp(5px, 7vw, 15px);

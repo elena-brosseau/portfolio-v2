@@ -1,5 +1,5 @@
 
-/////// Fade on Scroll 
+// Fade on Scroll 
 
 const fadeIns = Array.from(document.querySelectorAll('.fadeIn'));
 const fadeDowns = Array.from(document.querySelectorAll('.fadeDown'));
@@ -49,7 +49,7 @@ document.querySelector('main').addEventListener('scroll', () => {
 
 
 
-/////// Mobile Nav
+// Mobile Nav
 
 const menuIcon = document.querySelector('.menu-icon'),
       header = document.querySelector('header');
@@ -72,3 +72,68 @@ function toggleNav() {
 
     header.classList.toggle('open');
 }
+
+
+// Projects Slideshow
+
+const video = document.querySelector('.browser-content video')
+      title = document.querySelector('.project-name'),
+      description = document.querySelector('.project-description'),
+      github = document.querySelector('.link-buttons a:nth-child(1)'),
+      liveSite = document.querySelector('.link-buttons a:nth-child(2)'),
+      previous = document.querySelector('.project-nav-buttons .prev'),
+      next = document.querySelector('.project-nav-buttons .next')
+
+let i = 0;
+
+const projects = [
+    {
+        video: './assets/testing-center-screen-record.webm',
+        title: 'Testing Center',
+        description: 'Single page appointment scheduler app, created to fill a need at my current job. Built with React, Redux, React Router, and Jest.',
+        github: 'https://github.com/elena-brosseau/testing-center-2',
+        live: 'https://elena-brosseau.github.io/testing-center-2/'
+    },
+    {
+        video: './assets/ouch-screen-record.webm',
+        title: 'Ouch Productions',
+        description: 'A minimalist homepage for a media production company, inclucing video previews of each of their featured projects. Built with HTML, CSS, and Javascript.',
+        github: 'https://github.com/elena-brosseau/ouch',
+        live: 'https://ouchproductions.tv/'
+    }
+]
+
+function setProject() {
+    video.src = projects[i].video
+    title.innerHTML = projects[i].title
+    description.innerHTML = projects[i].description
+    github.href = projects[i].github
+    liveSite.href = projects[i].live
+}
+
+setProject();
+
+function nextProject() {
+
+    if (i < (projects.length - 1)) {
+        i++;
+    } else {
+        i = 0;
+    }
+
+    setProject()
+}
+
+function prevProject() {
+    
+    if (i === 0) {
+        i = (projects.length - 1);
+    } else {
+        i--;
+    }
+
+    setProject()
+}
+
+next.onclick = nextProject;
+previous.onclick = prevProject;
