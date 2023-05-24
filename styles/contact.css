@@ -110,6 +110,7 @@
 
 .contact-info a {
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .contact-info a:hover {
