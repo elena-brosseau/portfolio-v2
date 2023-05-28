@@ -23,6 +23,3 @@ The shapes were some of the most frustrating elements of the whole project, but 
 
 As soon as I had the concept for the floating shapes, I knew I needed to add more dimension to them and create a feeling of space. I used CSS's `transform-style: preserve-3d`, and played around with the z-indexes and scale of the elements. It was a fun challenge, and I'm super proud of how it came out.
 
-### Project Preview:
-
-I knew I wanted to present my project previews in a virtual browser, and I was looking for ways to better show off the key features of each project. Embedding video just seemed like a no brainer.
