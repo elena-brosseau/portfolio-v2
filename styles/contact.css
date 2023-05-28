@@ -67,6 +67,7 @@
     border-radius: 3px;
     box-shadow: 5px 5px 0 black;
     resize: none; 
+    -webkit-appearance: none;
 }
 
 .submit {
