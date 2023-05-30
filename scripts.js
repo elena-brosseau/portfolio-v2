@@ -89,6 +89,7 @@ let i = 0;
 const projects = [
     {
         video: './assets/testing-center-screen-record.webm',
+        poster: './assets/testing-thumb.png',
         title: 'Testing Center',
         description: 'Single page appointment scheduler app, created to fill a need at my current job. Built with React, Redux, React Router, and Jest.',
         github: 'https://github.com/elena-brosseau/testing-center-2',
@@ -96,6 +97,7 @@ const projects = [
     },
     {
         video: './assets/ouch-screen-record.webm',
+        poster: './assets/ouch-thumb.png',
         title: 'Ouch Productions',
         description: 'A minimalist homepage for a media production company, inclucing video previews of each of their featured projects. Built with HTML, CSS, and Javascript.',
         github: 'https://github.com/elena-brosseau/ouch',
@@ -105,6 +107,7 @@ const projects = [
 
 function setProject() {
     video.src = projects[i].video
+    video.poster = projects[i].poster
     title.innerHTML = projects[i].title
     description.innerHTML = projects[i].description
     github.href = projects[i].github
@@ -113,7 +116,7 @@ function setProject() {
 
 setProject();
 
-function nextProject() {
+next.onclick = () => {
 
     if (i < (projects.length - 1)) {
         i++;
@@ -124,7 +127,7 @@ function nextProject() {
     setProject()
 }
 
-function prevProject() {
+previous.onclick = () => {
     
     if (i === 0) {
         i = (projects.length - 1);
@@ -135,5 +138,3 @@ function prevProject() {
     setProject()
 }
 
-next.onclick = nextProject;
-previous.onclick = prevProject;
