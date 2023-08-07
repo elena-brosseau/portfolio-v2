@@ -76,65 +76,73 @@ function toggleNav() {
 
 // Projects Slideshow
 
-const video = document.querySelector('.browser-content video')
-      title = document.querySelector('.project-name'),
-      description = document.querySelector('.project-description'),
-      github = document.querySelector('.link-buttons a:nth-child(1)'),
-      liveSite = document.querySelector('.link-buttons a:nth-child(2)'),
-      previous = document.querySelector('.project-nav-buttons .prev'),
-      next = document.querySelector('.project-nav-buttons .next')
+// const video = document.querySelector('.browser-content video')
+//       title = document.querySelector('.project-name'),
+//       description = document.querySelector('.project-description'),
+//       github = document.querySelector('.link-buttons a:nth-child(1)'),
+//       liveSite = document.querySelector('.link-buttons a:nth-child(2)'),
+//       previous = document.querySelector('.project-nav-buttons .prev'),
+//       next = document.querySelector('.project-nav-buttons .next')
 
-let i = 0;
+// let i = 0;
 
-const projects = [
-    {
-        video: './assets/testing-center-screen-record.webm',
-        poster: './assets/testing-thumb.png',
-        title: 'Testing Center',
-        description: 'Single page appointment scheduler app, created to fill a need at my current job. Built with React, Redux, React Router, and Jest.',
-        github: 'https://github.com/elena-brosseau/testing-center-2',
-        live: 'https://elena-brosseau.github.io/testing-center-2/'
-    },
-    {
-        video: './assets/ouch-screen-record.webm',
-        poster: './assets/ouch-thumb.png',
-        title: 'Ouch Productions',
-        description: 'A minimalist homepage for a media production company, inclucing video previews of each of their featured projects. Built with HTML, CSS, and Javascript.',
-        github: 'https://github.com/elena-brosseau/ouch',
-        live: 'https://ouchproductions.tv/'
-    }
-]
+// const projects = [
+//     {
+//         video: './assets/testing-center-screen-record.webm',
+//         poster: './assets/testing-thumb.png',
+//         title: 'Testing Center',
+//         description: 'Single page appointment scheduler app, created to fill a need at my current job. Built with React, Redux, React Router, and Jest.',
+//         github: 'https://github.com/elena-brosseau/testing-center-2',
+//         live: 'https://elena-brosseau.github.io/testing-center-2/'
+//     },
+//     {
+//         video: './assets/ouch-screen-record.webm',
+//         poster: './assets/ouch-thumb.png',
+//         title: 'Ouch Productions',
+//         description: 'A minimalist homepage for a media production company, inclucing video previews of each of their featured projects. Built with HTML, CSS, and Javascript.',
+//         github: 'https://github.com/elena-brosseau/ouch',
+//         live: 'https://ouchproductions.tv/'
+//     },
+//     {
+//         video: './assets/italelectric-screen-record.webm',
+//         poster: './assets/italelectric-thumb.png',
+//         title: 'ItalElectric Cars',
+//         description: 'Webiste for a company that converts vintage cars to electric. Built with HTML, CSS, and Javascript.',
+//         github: 'https://github.com/elena-brosseau/italelectric',
+//         live: 'https://italelectricars.com/'
+//     }
+// ]
 
-function setProject() {
-    video.src = projects[i].video
-    video.poster = projects[i].poster
-    title.innerHTML = projects[i].title
-    description.innerHTML = projects[i].description
-    github.href = projects[i].github
-    liveSite.href = projects[i].live
-}
+// function setProject() {
+//     video.src = projects[i].video
+//     video.poster = projects[i].poster
+//     title.innerHTML = projects[i].title
+//     description.innerHTML = projects[i].description
+//     github.href = projects[i].github
+//     liveSite.href = projects[i].live
+// }
 
-setProject();
+// setProject();
 
-next.onclick = () => {
+// next.onclick = () => {
 
-    if (i < (projects.length - 1)) {
-        i++;
-    } else {
-        i = 0;
-    }
+//     if (i < (projects.length - 1)) {
+//         i++;
+//     } else {
+//         i = 0;
+//     }
 
-    setProject()
-}
+//     setProject()
+// }
 
-previous.onclick = () => {
+// previous.onclick = () => {
     
-    if (i === 0) {
-        i = (projects.length - 1);
-    } else {
-        i--;
-    }
+//     if (i === 0) {
+//         i = (projects.length - 1);
+//     } else {
+//         i--;
+//     }
 
-    setProject()
-}
+//     setProject()
+// }
 
